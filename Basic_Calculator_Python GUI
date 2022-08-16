@@ -77,40 +77,32 @@ def btn_0_clicked():
 
 
 def btn_56_clicked():
-    global A
     global operator
     global val
-    A = int(val)
     operator="+"
     val = val + "+"
     data.set(val)
 
 
 def btn_55_clicked():
-    global A
     global operator
     global val
-    A = int(val)
     operator="-"
     val = val + "-"
     data.set(val)
 
 
 def btn_54_clicked():
-    global A
     global operator
     global val
-    A = int(val)
     operator="*"
     val = val + "*"
     data.set(val)
 
 
 def btn_53_clicked():
-    global A
     global operator
     global val
-    A = int(val)
     operator="/"
     val = val + "/"
     data.set(val)
@@ -120,48 +112,18 @@ def c_clicked():
     global A
     global operator
     global val
-    val = ""
-    A=0
+    val =0
     operator = ""
     data.set(val)
 
 
 def result():
-    global A
     global operator
     global val
     val2 = val
-    if operator == "+":
-        x= int((val2.split("+")[1]))
-        c= A+x 
-        data.set(c)
-        val = str(c)
-    elif operator == "-":
-        x= int((val2.split("-")[1]))
-        c= A-x 
-        data.set(c)
-        val = str(c)
-    elif operator == "*":
-        x= int((val2.split("*")[1]))
-        c= A*x 
-        data.set(c)
-        val = str(c)
-    elif operator == "+":
-        x= int((val2.split("+")[1]))
-        c= A+x 
-        data.set(c)
-        val = str(c)
-    elif operator == "/":
-        x= int((val2.split("/")[1]))
-        if x==0:
-            messagebox.showerror("Error","Division by 0 is not allowed")
-            A=""
-            val = ""
-            data.set(val)
-        else:
-            c= int(A/x)
-            data.set(c)
-            val = str(c)
+    x= eval(val2)
+    data.set(x)
+
     
 btnrow1=Frame(root)
 btnrow1.pack(expand=True,fill="both")
