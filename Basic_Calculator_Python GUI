@@ -116,6 +116,7 @@ def c_clicked():
     operator = ""
     data.set(val)
 
+#Using eval functio to use different operators on the same time in same expression
 
 def result():
     global operator
