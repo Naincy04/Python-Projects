@@ -77,40 +77,32 @@ def btn_0_clicked():
 
 
 def btn_56_clicked():
-    global A
     global operator
     global val
-    A = int(val)
     operator="+"
     val = val + "+"
     data.set(val)
 
 
 def btn_55_clicked():
-    global A
     global operator
     global val
-    A = int(val)
     operator="-"
     val = val + "-"
     data.set(val)
 
 
 def btn_54_clicked():
-    global A
     global operator
     global val
-    A = int(val)
     operator="*"
     val = val + "*"
     data.set(val)
 
 
 def btn_53_clicked():
-    global A
     global operator
     global val
-    A = int(val)
     operator="/"
     val = val + "/"
     data.set(val)
@@ -120,48 +112,18 @@ def c_clicked():
     global A
     global operator
     global val
-    val = ""
-    A=0
+    val =0
     operator = ""
     data.set(val)
 
 
 def result():
-    global A
     global operator
     global val
     val2 = val
-    if operator == "+":
-        x= int((val2.split("+")[1]))
-        c= A+x 
-        data.set(c)
-        val = str(c)
-    elif operator == "-":
-        x= int((val2.split("-")[1]))
-        c= A-x 
-        data.set(c)
-        val = str(c)
-    elif operator == "*":
-        x= int((val2.split("*")[1]))
-        c= A*x 
-        data.set(c)
-        val = str(c)
-    elif operator == "+":
-        x= int((val2.split("+")[1]))
-        c= A+x 
-        data.set(c)
-        val = str(c)
-    elif operator == "/":
-        x= int((val2.split("/")[1]))
-        if x==0:
-            messagebox.showerror("Error","Division by 0 is not allowed")
-            A=""
-            val = ""
-            data.set(val)
-        else:
-            c= int(A/x)
-            data.set(c)
-            val = str(c)
+    x= eval(val2)
+    data.set(x)
+
     
 btnrow1=Frame(root)
 btnrow1.pack(expand=True,fill="both")
@@ -180,14 +142,18 @@ btn7=Button(btnrow1,
              text="7",
              font=("Verdana",22),
              relief=GROOVE,
-             border=0,
+             border=2,
+             activebackground="#C2C5F9",
+             background="#938AEE",
              command=btn_7_clicked)
 btn7.pack(side=LEFT,expand=TRUE,fill="both")
 
 btn8=Button(btnrow1,
              text="8",
              font=("Verdana",22),relief=GROOVE,
-             border=0,
+             border=2,
+             activebackground="#C2C5F9",
+             background="#938AEE",
              command=btn_8_clicked)
 btn8.pack(side=LEFT,expand=TRUE,fill="both")
 
@@ -196,7 +162,9 @@ btn9=Button(btnrow1,
              text="9",
              font=("Verdana",22),
              relief=GROOVE,
-             border=0,
+             border=2,
+             activebackground="#C2C5F9",
+             background="#938AEE",
              command=btn_9_clicked)
 btn9.pack(side=LEFT,expand=TRUE,fill="both")
 
@@ -204,7 +172,9 @@ btn53=Button(btnrow1,
              text="/",
              font=("Verdana",22),
              relief=GROOVE,
-             border=0,
+             border=2,
+             activebackground="#C2C5F9",
+             background="#938AEE",
              command=btn_53_clicked)
 btn53.pack(side=LEFT,expand=TRUE,fill="both")
 
@@ -213,7 +183,9 @@ btn4=Button(btnrow2,
              text="4",
              font=("Verdana",22),
              relief=GROOVE,
-             border=0,
+             border=2,
+             activebackground="#C2C5F9",
+             background="#938AEE",
              command=btn_4_clicked)
 btn4.pack(side=LEFT,expand=TRUE,fill="both")
 
@@ -221,7 +193,9 @@ btn5=Button(btnrow2,
              text="5",
              font=("Verdana",22),
              relief=GROOVE,
-             border=0,
+             border=2,
+             activebackground="#C2C5F9",
+             background="#938AEE",
              command=btn_5_clicked)
 btn5.pack(side=LEFT,expand=TRUE,fill="both")
 
@@ -230,7 +204,9 @@ btn6=Button(btnrow2,
              text="6",
              font=("Verdana",22),
              relief=GROOVE,
-             border=0,
+             border=2,
+             activebackground="#C2C5F9",
+             background="#938AEE",
              command=btn_6_clicked)
 btn6.pack(side=LEFT,expand=TRUE,fill="both")
 
@@ -238,7 +214,9 @@ btn54=Button(btnrow2,
              text="*",
              font=("Verdana",22),
              relief=GROOVE,
-             border=0,
+             border=2,
+             activebackground="#C2C5F9",
+             background="#938AEE",
              command=btn_54_clicked)
 btn54.pack(side=LEFT,expand=TRUE,fill="both")
 
@@ -247,7 +225,9 @@ btn1=Button(btnrow3,
              text="1",
              font=("Verdana",22),
              relief=GROOVE,
-             border=0,
+             border=2,
+             activebackground="#C2C5F9",
+             background="#938AEE",
              command=btn_1_clicked)
 btn1.pack(side=LEFT,expand=TRUE,fill="both")
 
@@ -255,7 +235,9 @@ btn2=Button(btnrow3,
              text="2",
              font=("Verdana",22),
              relief=GROOVE,
-             border=0,
+             border=2,
+             activebackground="#C2C5F9",
+             background="#938AEE",
              command=btn_2_clicked)
 btn2.pack(side=LEFT,expand=TRUE,fill="both")
 
@@ -264,7 +246,9 @@ btn3=Button(btnrow3,
              text="3",
              font=("Verdana",22),
              relief=GROOVE,
-             border=0,
+             border=2,
+             activebackground="#C2C5F9",
+             background="#938AEE",
              command=btn_3_clicked)
 btn3.pack(side=LEFT,expand=TRUE,fill="both")
 
@@ -272,7 +256,9 @@ btn55=Button(btnrow3,
              text="-",
              font=("Verdana",22),
              relief=GROOVE,
-             border=0,
+             border=2,
+             activebackground="#C2C5F9",
+             background="#938AEE",
              command = btn_55_clicked)
 btn55.pack(side=LEFT,expand=TRUE,fill="both")
 
@@ -280,7 +266,9 @@ btn59=Button(btnrow4,
              text="Cancel",
              font=("Verdana",22),
              relief=GROOVE,
-             border=0,
+             border=2,
+             activebackground="#C2C5F9",
+             background="#938AEE",
              command=c_clicked)
 btn59.pack(side=LEFT,expand=TRUE,fill="both")
 
@@ -288,7 +276,9 @@ btn59=Button(btnrow4,
              text="0",
              font=("Verdana",22),
              relief=GROOVE,
-             border=0,
+             border=2,
+             activebackground="#C2C5F9",
+             background="#938AEE",
              command=btn_0_clicked)
 btn59.pack(side=LEFT,expand=TRUE,fill="both")
 
@@ -296,7 +286,9 @@ btn57=Button(btnrow4,
              text="=",
              font=("Verdana",22),
              relief=GROOVE,
-             border=0,
+             border=2,
+             activebackground="#C2C5F9",
+             background="#938AEE",
              command = result)
 btn57.pack(side=LEFT,expand=TRUE,fill="both")
 
@@ -304,7 +296,9 @@ btn56=Button(btnrow4,
              text="+",
              font=("Verdana",22),
              relief=GROOVE,
-             border=0,
+             border=2,
+             activebackground="#C2C5F9",
+             background="#938AEE",
              command= btn_56_clicked)
 btn56.pack(side=LEFT,expand=TRUE,fill="both")
 
