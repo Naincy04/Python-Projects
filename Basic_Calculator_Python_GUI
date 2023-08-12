@@ -112,7 +112,7 @@ def c_clicked():
     global A
     global operator
     global val
-    val =0
+    val =""
     operator = ""
     data.set(val)
 
@@ -263,7 +263,7 @@ btn55=Button(btnrow3,
 btn55.pack(side=LEFT,expand=TRUE,fill="both")
 
 btn59=Button(btnrow4,
-             text="Cancel",
+             text="Clear",
              font=("Verdana",22),
              relief=GROOVE,
              border=2,
